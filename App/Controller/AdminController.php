@@ -12,5 +12,4 @@ class AdminController extends ControllerAdminController
     {
         return new AdminTheme();
     }
-
 }

@@ -23,10 +23,10 @@ class Project extends Model
     * Project title
     */
     public ShortText $title;
-    
+
     /**
     * @var LongText $description
-    * 
+    *
     */
     public LongText $description;
 
@@ -79,6 +79,6 @@ class Project extends Model
                 $newArray[] = $mobileImages[$i];
             }
         }
-        return $newArray; 
+        return $newArray;
     }
 }

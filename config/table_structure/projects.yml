@@ -3,7 +3,6 @@ table_comment: 'Contains project table'
 fields:
   title:
     type: short_text
-    length: '255'
     column_name: title
     primary_key: false
     autoIncrement: false
@@ -11,23 +10,13 @@ fields:
     isUnique: false
     default: null
     comment: 'Project title'
-  desktop_image:
-    type: file
-    reference_table: files
-    column_name: desktop_image
+    length: '255'
+  description:
+    type: long_text
+    column_name: description
     primary_key: false
     autoIncrement: false
     isNull: true
     isUnique: false
     default: null
-    comment: 'Project desktop image'
-  mobile_image:
-    type: file
-    reference_table: files
-    column_name: mobile_image
-    primary_key: false
-    autoIncrement: false
-    isNull: true
-    isUnique: false
-    default: null
-    comment: 'Project mobile image'
+    comment: ''

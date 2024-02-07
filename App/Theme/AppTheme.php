@@ -22,7 +22,8 @@ class AppTheme extends BaseTheme
         $this->navbar = FrontNavbar::create();
     }
 
-    public function buildFooter(){
+    public function buildFooter()
+    {
         $this->footer = FrontFooter::create();
     }
 

@@ -248,3 +248,4 @@ big_integer: 'Büyük Tam Sayı (İşaretsiz)'
 db_driver: 'Veritabanı Sürücüsü'
 user_details: 'Kullanıcı Bilgileri'
 install: Yükle
+projects: Projeler

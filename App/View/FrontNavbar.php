@@ -4,11 +4,10 @@ namespace App\View;
 
 use Src\Views\Navbar;
 
-class FrontNavbar extends Navbar{
-
+class FrontNavbar extends Navbar
+{
     public function __construct()
     {
-        
     }
 
     public function getTemplateFile(): string

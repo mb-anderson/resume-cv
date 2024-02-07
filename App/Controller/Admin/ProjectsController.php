@@ -14,16 +14,19 @@ use Src\Traits\Controller\ListFormControllerTrait;
 class ProjectsController extends AdminController
 {
     use ListFormControllerTrait;
-    
-    public function getModelClass(): string{
+
+    public function getModelClass(): string
+    {
         return Project::class;
     }
 
-    public function getUpdateTitle(Model $model): string{
+    public function getUpdateTitle(Model $model): string
+    {
         return Translation::getTranslation("update");
     }
 
-    public function getAddTitle(): string{
+    public function getAddTitle(): string
+    {
         return Translation::getTranslation("add");
     }
 }

@@ -30,7 +30,7 @@ class ProjectImage extends Model
     public TableReference $project;
     /**
     * @var File $image
-    * 
+    *
     */
     public File $image;
     /**

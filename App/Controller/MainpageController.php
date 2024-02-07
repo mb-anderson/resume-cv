@@ -24,5 +24,4 @@ class MainpageController extends AppController
     {
         $this->projects = Project::getAll([]);
     }
-    
 }

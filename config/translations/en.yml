@@ -248,3 +248,4 @@ big_integer: 'Big Integer (Unsigned)'
 db_driver: 'Database Driver'
 user_details: 'User Details'
 install: Install
+projects: Projects

@@ -24,7 +24,7 @@ class PortfolioController extends AppController
     {
         return "page-portfolio.twig";
     }
-    
+
     public function preprocessPage()
     {
         if (isset($this->arguments[0])) {
@@ -41,5 +41,4 @@ class PortfolioController extends AppController
             }
         }
     }
-    
 }

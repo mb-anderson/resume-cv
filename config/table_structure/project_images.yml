@@ -1,0 +1,35 @@
+table_name: project_images
+table_comment: Project
+fields:
+  project:
+    type: table_reference
+    column_name: project
+    primary_key: false
+    autoIncrement: false
+    isNull: true
+    isUnique: false
+    default: null
+    comment: 'Project reference'
+    reference_table: projects
+  image:
+    type: file
+    column_name: image
+    primary_key: false
+    autoIncrement: false
+    isNull: true
+    isUnique: false
+    default: null
+    comment: ''
+    reference_table: files
+  image_type:
+    type: enumarated_list
+    column_name: image_type
+    primary_key: false
+    autoIncrement: false
+    isNull: true
+    isUnique: false
+    default: null
+    comment: 'Image tpe is desktop or is mobile image?'
+    values:
+      DESKTOP: DESKTOP
+      MOBILE: MOBILE
