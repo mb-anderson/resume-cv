@@ -2,25 +2,27 @@
 
 namespace App\Controller;
 
+use App\Entity\Project;
 use App\Theme\AppController;
 use Src\Entity\Translation;
 
 class MainpageController extends AppController
 {
-    public $content;
+    public $projects;
 
     public function checkAccess(): bool
     {
         return true;
     }
 
+    public function getTemplateFile(): string
+    {
+        return "page-mainpage.twig";
+    }
+
     public function preprocessPage()
     {
-        $titleSuffix = \CoreDB::currentUser()->isLoggedIn() ? ", " . \CoreDB::currentUser()->name : "";
-        $this->setTitle(Translation::getTranslation("welcome") . $titleSuffix);
+        $this->projects = Project::getAll([]);
     }
-    public function echoContent()
-    {
-        return Translation::getTranslation("mainpage_welcome_message");
-    }
+    
 }

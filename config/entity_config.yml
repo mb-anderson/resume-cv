@@ -38,3 +38,14 @@ push_notifications:
   class: Src\Entity\PushNotification
 push_notification_subscriptions:
   class: Src\Entity\PushNotificationSubscription
+project_advantages:
+  class: App\Entity\ProjectAdvantage
+project_images:
+  class: App\Entity\ProjectImage
+projects:
+  class: App\Entity\Project
+  oneToMany:
+    project_advantages:
+      foreignKey: project
+    project_images:
+      foreignKey: project

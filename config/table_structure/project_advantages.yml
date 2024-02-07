@@ -1,0 +1,23 @@
+table_name: project_advantages
+table_comment: 'Contains advantages data for project table'
+fields:
+  project:
+    type: table_reference
+    reference_table: projects
+    column_name: project
+    primary_key: false
+    autoIncrement: false
+    isNull: true
+    isUnique: false
+    default: null
+    comment: ''
+  advantage:
+    type: short_text
+    length: '255'
+    column_name: advantage
+    primary_key: false
+    autoIncrement: false
+    isNull: true
+    isUnique: false
+    default: null
+    comment: ''

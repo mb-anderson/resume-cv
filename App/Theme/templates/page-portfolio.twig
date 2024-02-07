@@ -1,0 +1,71 @@
+{% extends "page-front-template.twig" %}
+
+{% block content %}
+<section class="py-5 z-index-1 mb-5">
+    <div class="container">
+        <div class="card pt-5 pb-3 px-5 border-0 shadow-sm">
+            <div class="card-body">
+                <div class="text-center mt-n3">
+                    <h2>Projelerim</h2>
+                    <p class="lead">Projeleri, müşterilerin istediği şekilde ve ihtiyaçlarına göre oluşturuyorum.
+                        Çözümler sunuyorum ve uygun şekilde uyguluyorum. Daha önce geliştirdiğim projeler bu bölümde
+                        yer almaktadır. <b>Bütün projeleri eklemek ne yazık ki mümkün olamamaktadır.</b></p>
+                </div>
+            </div>
+        </div>
+        {% for project in controller.project %}
+        <div id="{{ project.title }}" class="card p-5 border-0 shadow-sm mt-5 mb-5">
+            <div class="card-body ">
+                <div class="text-center">
+                    <div>
+                        <h3 class="text-center text-danger fw-bold mt-5 mb-5" style="margin-top: 10px;">PROJE: {{ project.title }}</h3>
+
+
+                        <div class="row justify-content-center">
+
+                            <div class="col-12">
+                                <div class="row">
+                                    {% for projectAdvantage in project.project_advantages.getValue() %}
+
+                                    <div class="col-md-4">
+                                        <p class="mb-1">
+                                            <span class="fa fa-check text-success"></span>
+                                            {{ projectAdvantage.advantage }}
+                                        </p>
+                                    </div>
+
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12 text-center">
+                                <h5>Desktop</h5>
+
+                            </div>
+                            {#<div class="col-md-4 text-center">
+                                <h5>Mobile</h5>
+
+                            </div>#}
+                            {% for image in project.getProjectImages() %}
+                            <div class="col-md-12 text-center mt-5">
+                                <img src="{{ image.image_type.getValue() == 'DESKTOP'? image.getFileUrlForField('image'):'' }}"
+                                    style="max-width:100%">
+                            </div>
+                           {#} <div class="col-md-4 text-center mt-5">
+                                <img src="{{ image.image_type.getValue() == 'MOBILE'? image.getFileUrlForField('image'):'' }}"
+                                    style="max-width: 100%; max-height: 440px">
+                            </div>#}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</section>
+{% endblock %}
