@@ -22,7 +22,9 @@
 
 
                         <div class="row justify-content-center">
-
+                            <div class="col-md-12">
+                                {{ project.description|raw }}
+                            </div>
                             <div class="col-12">
                                 <div class="row">
                                     {% for projectAdvantage in project.project_advantages.getValue() %}
